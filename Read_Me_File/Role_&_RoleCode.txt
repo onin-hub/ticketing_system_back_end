@@ -1,0 +1,86 @@
+    /**
+     * @description sa pag create ng super admin
+     * @field user_account_info.location ObjectId is not connected to any docs its a dummy ObjectId para lng sa express-validator
+     * @field user_account_info.sub_location ObjectId is not connected to any docs its a dummy ObjectId para lng sa express-validator
+     * @field user_account_info.created_by ObjectId is not connected to any docs its a dummy ObjectId para lng sa express-validator
+    */
+    
+    * only one Super Admin
+    * Role: Super Admin = Role code: 1
+    * 
+    * only one Admin in every Location
+    * Role: Admin = Role code: 2
+    * 
+    * only one Ticketer in every sub location over Location
+    * Role: Ticketer = Role code: 3
+    * 
+    * multiple completor in every Sub location over Location
+    * Role: Completor = Role code: 4
+
+
+EXAMPLE:
+
+copy and paste to excel so you can more visualize the chart
+
+SUPER ADMIN
+
+ADMIN	
+    Location: MANAGEMENT INFORMATION SYSTEM		
+	Sub location: MANAGEMENT INFORMATION SYSTEM
+
+SET - 1
+
+TICKETER
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: Mobile and Web Developer	
+
+/**
+*completor is the one who complete the ticket made
+*/
+
+COMPLETOR 1 
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: Mobile and Web Developer	
+
+COMPLETOR 2
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: Mobile and Web Developer	
+
+SET - 2
+
+TICKETER
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: Hardware and Maintenance
+
+/**
+*completor is the one who complete the ticket made
+*/
+
+COMPLETOR 1 
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: Hardware and Maintenance	
+
+COMPLETOR 2
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: Hardware and Maintenance	
+
+SET - 3
+
+TICKETER
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: System Support
+
+/**
+*completor is the one who complete the ticket made
+*/
+
+COMPLETOR 1 
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: System Support	
+
+COMPLETOR 2
+    Location: MANAGEMENT INFORMATION SYSTEM	
+    Sub location: System Support	
+
+
+AND MORE...................
